@@ -1,6 +1,6 @@
 # Protoc Runtime Library
 
-The Protoc Runtime Library is a .NET library that facilitates the generation of C# code from Protocol Buffer files using protoc.
+The Protoc Runtime Library is a .NET library, which allows you to generate C# code from Protocol Buffer files at runtime.
 
 ## Features
 
