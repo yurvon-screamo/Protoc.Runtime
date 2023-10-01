@@ -47,7 +47,7 @@ Assembly generatedAssembly = await protoGenerator.Generate(rootDirectory, protoF
 
 ## License
 
-This project is licensed under the [Apache 2.0 License](LICENSE.md).
+This project is licensed under the [Apache 2.0 License](LICENSE).
 
 ## TODO
 
