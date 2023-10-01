@@ -58,3 +58,7 @@ This project is licensed under the [Apache 2.0 License](LICENSE).
 * Helper Sets for Parsing Generated Assembly
 
 * Customization of Generation via Options
+
+* Create unit, component test
+
+* Create github page
