@@ -13,7 +13,7 @@ namespace Protoc.Runtime.CodeCompiler;
 /// </summary>
 public class CSharpCodeCompiler : ICodeCompiler
 {
-    /// <summary>
+    /// <summary>`
     /// Compiles the provided code and generates an assembly using an empty set of assembly tags.
     /// </summary>
     /// <param name="code">The C# code to compile.</param>
