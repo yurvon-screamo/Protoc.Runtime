@@ -18,12 +18,14 @@ The Protoc Runtime Library is a .NET library, which allows you to generate C# co
 1. Clone this repository.
 
 2. Build the solution using .NET CLI:
-   ```
+
+   ```csharp
    dotnet build
    ```
 
 3. Run the tests (optional):
-   ```
+
+   ```csharp
    dotnet test
    ```
 
@@ -51,14 +53,14 @@ This project is licensed under the [Apache 2.0 License](LICENSE).
 
 ## TODO
 
-* Calling gRPC Clients
+- Calling gRPC Clients
 
-* Implementing Services at Runtime
+- Implementing Services at Runtime
 
-* Helper Sets for Parsing Generated Assembly
+- Helper Sets for Parsing Generated Assembly
 
-* Customization of Generation via Options
+- Customization of Generation via Options
 
-* Create unit, component test
+- Create unit, component test
 
-* Create github page
+- Create github page

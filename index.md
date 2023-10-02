@@ -1,7 +1,66 @@
-# This is the **HOMEPAGE**
+# Protoc Runtime Library
 
-Refer to [Markdown](http://daringfireball.net/projects/markdown/) for how to write markdown files.
+The Protoc Runtime Library is a .NET library, which allows you to generate C# code from Protocol Buffer files at runtime.
 
-## Quick Start Notes
+## Features
 
-1. Add images to the *images* folder if the file is referencing an image.
+- Compiles Protocol Buffer files to C# code
+- Supports generating code for gRPC
+
+## Prerequisites
+
+- .NET 7.0 SDK
+- Protoc compiler
+- gRPC Tools
+
+## Getting Started
+
+1. Clone this repository.
+
+2. Build the solution using .NET CLI:
+
+   ```csharp
+   dotnet build
+   ```
+
+3. Run the tests (optional):
+
+   ```csharp
+   dotnet test
+   ```
+
+## Usage
+
+Use the `ProtoGenerator` to generate C# code from Protocol Buffer files:
+
+```csharp
+using Protoc.Runtime;
+
+// Instantiate ProtoGenerator with desired ICodeCompiler and ICodeGenerator implementations
+ProtoGenerator protoGenerator = ProtoGenerator.CreateDefault();
+
+// Specify the root directory and Protocol Buffer files
+string rootDirectory = "Path/To/Your/Proto/Root";
+string[] protoFiles = { "file1.proto", "file2.proto" }; // List of Protocol Buffer files
+
+// Generate the assembly
+Assembly generatedAssembly = await protoGenerator.Generate(rootDirectory, protoFiles);
+```
+
+## License
+
+This project is licensed under the [Apache 2.0 License](LICENSE).
+
+## TODO
+
+- Calling gRPC Clients
+
+- Implementing Services at Runtime
+
+- Helper Sets for Parsing Generated Assembly
+
+- Customization of Generation via Options
+
+- Create unit, component test
+
+- Create github page
