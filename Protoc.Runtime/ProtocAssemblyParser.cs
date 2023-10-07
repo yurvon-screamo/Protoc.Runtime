@@ -50,6 +50,4 @@ public class ProtocAssemblyParser : IProtocAssemblyParser
         return protocAssembly.DefinedTypes
             .Where(d => d.BaseType?.BaseType == typeof(ClientBase));
     }
-
-
 }

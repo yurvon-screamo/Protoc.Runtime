@@ -3,16 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "runtime-protoc.cmd", "runtime-protoc\runtime-protoc.cmd.csproj", "{CD782502-CE44-4F93-9BE7-75B10B7E9F1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample", "Sample\Sample.csproj", "{CD782502-CE44-4F93-9BE7-75B10B7E9F1F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Protoc.Runtime", "Protoc.Runtime\Protoc.Runtime.csproj", "{3506431B-8F38-4814-AB3B-4DC8F6851FCB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{6BB2AA4F-8152-4A3A-BEF5-2E50981D8B0C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{6BB2AA4F-8152-4A3A-BEF5-2E50981D8B0C}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcServer", "GrpcServer\GrpcServer.csproj", "{048D6464-8C39-45EB-B2B5-5D5E8087D647}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleServer", "SampleServer\SampleServer.csproj", "{048D6464-8C39-45EB-B2B5-5D5E8087D647}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

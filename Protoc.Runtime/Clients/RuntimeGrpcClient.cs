@@ -9,9 +9,6 @@ using System.Runtime.CompilerServices;
 
 namespace Protoc.Runtime.Clients;
 
-/// <summary>
-/// Grpc service client - impl
-/// </summary>
 internal class RuntimeGrpcClient : IRuntimeGrpcClient
 {
     private const string Client = "Client";

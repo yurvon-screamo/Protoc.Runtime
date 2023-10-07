@@ -18,13 +18,13 @@ The Protoc Runtime Library is a .NET library, which allows you to generate C# co
    dotnet build *.sln
    ```
 
-3. Run GrpcServer for test (optional):
+3. Run SampleServer for test:
 
    ```csharp
-   cd dotnet test && dotnet run
+   cd SampleServer && dotnet run
    ```
 
-4. Run runtime-protoc.cmd project with examples 
+4. Run Sample project with examples 
 
 ## Usage
 
