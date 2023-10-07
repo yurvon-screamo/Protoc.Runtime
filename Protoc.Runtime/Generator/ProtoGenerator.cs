@@ -1,9 +1,9 @@
-﻿using Protoc.Runtime.CodeCompiler;
-using Protoc.Runtime.CodeGenerator;
+﻿using Protoc.Runtime.Generator.CodeCompiler;
+using Protoc.Runtime.Generator.CodeGenerator;
 
 using System.Reflection;
 
-namespace Protoc.Runtime;
+namespace Protoc.Runtime.Generator;
 
 /// <summary>
 /// Class responsible for generating assemblies from Protocol Buffer files.

@@ -6,12 +6,7 @@ The Protoc Runtime Library is a .NET library, which allows you to generate C# co
 
 - Compiles Protocol Buffer files to C# code
 - Supports generating code for gRPC
-
-## Prerequisites
-
-- .NET 7.0 SDK
-- Protoc compiler
-- gRPC Tools
+- Call grpc clients created in runtime
 
 ## Getting Started
 
@@ -20,14 +15,16 @@ The Protoc Runtime Library is a .NET library, which allows you to generate C# co
 2. Build the solution using .NET CLI:
 
    ```csharp
-   dotnet build
+   dotnet build *.sln
    ```
 
-3. Run the tests (optional):
+3. Run GrpcServer for test (optional):
 
    ```csharp
-   dotnet test
+   cd dotnet test && dotnet run
    ```
+
+4. Run runtime-protoc.cmd project with examples 
 
 ## Usage
 
@@ -45,6 +42,26 @@ string[] protoFiles = { "file1.proto", "file2.proto" }; // List of Protocol Buff
 
 // Generate the assembly
 Assembly generatedAssembly = await protoGenerator.Generate(rootDirectory, protoFiles);
+
+ProtocAssemblyParser protocAssemblyParser = new();
+
+IReadOnlyCollection<string> services = protocAssemblyParser.GetGrpcServices(generatedAssembly);
+
+IRuntimeGrpcClient client = protocAssemblyParser.GetGrpcClient(
+    generatedAssembly,
+    "Greeter",
+    GrpcChannel.ForAddress("http://localhost:5251"))!;
+
+UnaryCallRpcMeta unaryCallRpcMeta  = client.GetUnaryCallRpcMeta("SayHello")!;
+Console.WriteLine(unaryCallRpcMeta);
+
+IReadOnlyCollection<string> unaryRpcs = client.GetUnaryRpcs();
+Console.WriteLine(string.Join(", ", unaryRpcs));
+
+string response = await client.UnaryCallAsJsonAsync("SayHello",
+    "{\"name\": \"123\"}");
+
+Console.WriteLine(response);
 ```
 
 ## License
@@ -53,9 +70,11 @@ This project is licensed under the [Apache 2.0 License](LICENSE).
 
 ## TODO
 
-- Calling gRPC Clients
+- Normal async call gRPC Clients
 
-- Implementing Services at Runtime
+- gRPC Clients for streaming
+
+- Implementing and Map Server side at Runtime
 
 - Helper Sets for Parsing Generated Assembly
 

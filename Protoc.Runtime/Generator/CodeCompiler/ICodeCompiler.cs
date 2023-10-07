@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Protoc.Runtime.CodeCompiler;
+namespace Protoc.Runtime.Generator.CodeCompiler;
 
 /// <summary>
 /// Service for compiling C# code and generating an assembly.

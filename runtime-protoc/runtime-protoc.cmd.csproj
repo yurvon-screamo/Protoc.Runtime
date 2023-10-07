@@ -9,6 +9,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="Grpc.Net.Client" Version="2.49.0" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <ProjectReference Include="..\Protoc.Runtime\Protoc.Runtime.csproj" />
 	</ItemGroup>
 

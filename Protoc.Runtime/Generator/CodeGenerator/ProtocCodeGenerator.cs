@@ -2,8 +2,9 @@
 using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Text;
 
-namespace Protoc.Runtime.CodeGenerator;
+namespace Protoc.Runtime.Generator.CodeGenerator;
 
 /// <summary>
 /// Service for generating C# code from Protocol Buffer files using protoc.
@@ -39,7 +40,9 @@ public class ProtocCodeGenerator : ICodeGenerator
             ThrowNotSupported();
         }
 
-        targetDirectory += "_" + architecture.ToString().ToLowerInvariant();
+        targetDirectory += "_" + architecture
+            .ToString()
+            .ToLowerInvariant();
 
         ImmutableArray<string> protocFiles = assembly
             .GetManifestResourceNames()
@@ -94,12 +97,23 @@ public class ProtocCodeGenerator : ICodeGenerator
     {
         DirectoryInfo tmp = Directory.CreateDirectory(Ulid.NewUlid().ToString());
 
-        string cmd = "--plugin=protoc-gen-grpc="
-            + s_grpcPluginPath + " "
-            + "--csharp_out=" + tmp.FullName + " "
-            + "--grpc_out=" + tmp.FullName + " "
-            + "-I " + root + " "
-            + string.Join(" " + root + "/", files);
+        StringBuilder stringBuilder = new();
+
+        stringBuilder.Append("--plugin=protoc-gen-grpc=");
+        stringBuilder.Append(s_grpcPluginPath);
+        stringBuilder.Append(' ');
+        stringBuilder.Append("--csharp_out=");
+        stringBuilder.Append(tmp.FullName);
+        stringBuilder.Append(' ');
+        stringBuilder.Append("--grpc_out=");
+        stringBuilder.Append(tmp.FullName);
+        stringBuilder.Append(' ');
+        stringBuilder.Append("-I ");
+        stringBuilder.Append(root);
+        stringBuilder.Append(' ');
+        stringBuilder.Append(string.Join(" " + root + "/", files));
+
+        string cmd = stringBuilder.ToString();
 
         Process process = new()
         {

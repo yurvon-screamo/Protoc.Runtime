@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решен
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcServer", "GrpcServer\GrpcServer.csproj", "{048D6464-8C39-45EB-B2B5-5D5E8087D647}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{3506431B-8F38-4814-AB3B-4DC8F6851FCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3506431B-8F38-4814-AB3B-4DC8F6851FCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3506431B-8F38-4814-AB3B-4DC8F6851FCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{048D6464-8C39-45EB-B2B5-5D5E8087D647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{048D6464-8C39-45EB-B2B5-5D5E8087D647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{048D6464-8C39-45EB-B2B5-5D5E8087D647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{048D6464-8C39-45EB-B2B5-5D5E8087D647}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

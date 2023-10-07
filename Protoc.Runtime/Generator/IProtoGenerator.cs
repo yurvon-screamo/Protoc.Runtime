@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Protoc.Runtime;
+namespace Protoc.Runtime.Generator;
 
 /// <summary>
 /// Service responsible for generating assemblies from Protocol Buffer files.

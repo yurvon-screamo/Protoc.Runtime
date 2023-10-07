@@ -6,7 +6,7 @@ using System.Buffers;
 using System.Reflection;
 using System.Runtime.Loader;
 
-namespace Protoc.Runtime.CodeCompiler;
+namespace Protoc.Runtime.Generator.CodeCompiler;
 
 /// <summary>
 /// Class for compiling C# code and generating an assembly.

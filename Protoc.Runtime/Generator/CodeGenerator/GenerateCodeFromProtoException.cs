@@ -1,4 +1,4 @@
-﻿namespace Protoc.Runtime.CodeGenerator;
+﻿namespace Protoc.Runtime.Generator.CodeGenerator;
 
 /// <summary>
 /// Exception thrown when there is an error generating code from Protocol Buffer files.

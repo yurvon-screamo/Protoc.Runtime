@@ -1,4 +1,4 @@
-﻿namespace Protoc.Runtime.CodeGenerator;
+﻿namespace Protoc.Runtime.Generator.CodeGenerator;
 
 /// <summary>
 /// Service for generating C# code from Protocol Buffer files using protoc.
