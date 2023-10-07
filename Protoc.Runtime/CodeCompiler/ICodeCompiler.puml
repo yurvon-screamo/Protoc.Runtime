@@ -1,0 +1,6 @@
+@startuml
+interface ICodeCompiler {
+    CompileCode(code:IReadOnlyCollection<string>, assemblyTags:IReadOnlyCollection<Type>) : Assembly
+    CompileCode(code:IReadOnlyCollection<string>) : Assembly
+}
+@enduml

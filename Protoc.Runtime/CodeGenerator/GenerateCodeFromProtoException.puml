@@ -1,0 +1,6 @@
+@startuml
+class GenerateCodeFromProtoException {
+    <<internal>> GenerateCodeFromProtoException(message:string)
+}
+Exception <|-- GenerateCodeFromProtoException
+@enduml

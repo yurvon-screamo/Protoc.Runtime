@@ -1,0 +1,8 @@
+@startuml
+class CSharpCodeCompiler {
+    - CompileCode(code:IReadOnlyCollection<string>) : Assembly
+    - CompileCode(code:IReadOnlyCollection<string>, assemblyTags:IReadOnlyCollection<Type>) : Assembly
+    - CompileCodeImpl(code:IReadOnlyCollection<string>, assemblyTags:IReadOnlyCollection<Type>) : Assembly
+}
+ICodeCompiler <|-- CSharpCodeCompiler
+@enduml

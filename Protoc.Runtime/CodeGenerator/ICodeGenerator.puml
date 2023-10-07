@@ -1,0 +1,6 @@
+@startuml
+interface ICodeGenerator {
+    GenerateCodeFromProto(root:string, files:string[]) : Task<IReadOnlyCollection<string>>
+    GenerateCodeFromProto(root:string, files:IEnumerable<string>) : Task<IReadOnlyCollection<string>>
+}
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+interface IProtoGenerator {
+    GenerateAll(root:string, directories:IEnumerable<string>) : Task<Assembly>
+    Generate(root:string, files:string[]) : Task<Assembly>
+    Generate(root:string, files:IEnumerable<string>) : Task<Assembly>
+}
+@enduml
